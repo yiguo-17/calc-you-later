@@ -1,6 +1,9 @@
+/*********************************************
+ * STEP 1 - IMPORTING OUR CALCULATE FUNCTION *
+ *********************************************/
+
 // Grab the calculate function from our other file. Imports can be tricky at first, so this one's a gimme!
 const calculate = require('./calculate-back-end.js')
-
 
 
 
@@ -10,6 +13,10 @@ const calculate = require('./calculate-back-end.js')
 // That way our comments will describe what the code right under it does.
 // Thus providing documentation for future readers. Including yourself!
 
+
+/**********************
+ * ABOUT PROCESS.ARGV *
+ **********************/
 
 // Grab the three user inputs from the command line. They'll be in a special
 // array that the node environment gives us, called "process.argv".
@@ -25,32 +32,49 @@ const calculate = require('./calculate-back-end.js')
 // So if we want to get the commands the user wants US to run, those strings
 // start at index 2.
 
+
+
+/*********************************
+ * STEP 2 - GRAB THE USER INPUTS *
+ *********************************/
+
 // Put the two numbers and the operation into variables so we can feed them into
 // our calculate function. We can decide what order the user inputs go in by
-// storing the approprate pair of them as the numbers, and the other one as the
+// storing the approprIate pair of them as the numbers, and the other one as the
 // operation. By far the most user-friendly way to store them is to assume
 // they're in [number] [operation] [number] order, as in:
 // 5 + 5
 // 6 minus 4
 // 10 X 5
 
-// Here we store what's in those process.argv indices in well-named variables.
+
+// Use (well-named) variables to store the user inputs that are available in the process.argv array.
 
 
-//As a stretch goal--done after everything else works!--the code below reassigns
-// the second number and operation variables to the values held in alternate
-// process.argv indices.
 
-// This is to allow for someone to type in two words for operations, like
+/**************************************
+ * STRETCH GOAL - TWO-WORD OPERATIONS *
+ **************************************/
+
+//As a stretch goal--done after everything else works!- allow for someone to type in two words for operations, like
 // "divided by" or "subtracted from". Those two-word operations are
-// space-separated, which means node reads them in as separate strings. We first
-// have to detect whether those extra strings are in there, though! Several ways
-// to do this.
+// space-separated, which means node will put them in separate indices. So instead of [number] [operation] [number], they'll come into process.argv in [number] [operation word] [operation word] [number] order.
 
-// And we can't forget to put the space back in our two-word operation, as that's how calculate is expecting to receive it!
+// And we can't forget to make our two-word operation back into one string for the next step, as that's how calculate is expecting to receive it!
+
+
+/*************************************************************
+ * STEP 3 - FEED THE USER INPUTS INTO OUR CALCULATE FUNCTION *
+ *************************************************************/
 
 
 // Store the return value of our calculate function, making sure to feed it the correct values from our user input.
 
 
-// Then, print out that return value to the terminal.
+/******************************************
+ * STEP 4 - PRINT IT BACK TO THE TERMINAL *
+ ******************************************/
+
+// Take the return value from the previous step and print it back out to the user.
+
+
