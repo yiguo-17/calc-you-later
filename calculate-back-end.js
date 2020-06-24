@@ -14,7 +14,7 @@ function calculate(num1, num2, operation) {
   // 'subtracted from' is the wrong direction, and future tests will reflect this.
   // Management apologizes for the error and any subsequent mishaps that occurred from this faulty subtraction.
   const isSubtraction = operation === '-' || operation === 'minus' || operation === 'subtracted from';
-  const isMultiplication = operation.toLowerCase() === 'x' || operation === 'times' || operation === 'multiplied by';
+  const isMultiplication = operation.toLowerCase === 'x' || operation === 'times' || operation === 'multiplied by';
   const isDivision = operation === '/' || operation === 'divided by';
   const isModulus = operation === '%' || operation === 'modulus' || operation === 'mod';
 

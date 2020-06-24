@@ -2,9 +2,14 @@
  * YOUR CODE HERE!                           *
  ********************************************/
 const calculate = require('./calculate-back-end.js');
-const num1 = getInput(0);
-const num2 = getInput(2);
-const operation = getInput(1);
+const num2 = String(process.argv.slice(-1));
+let num1 = '';
+let operation= '';
+if(isNaN(process.argv.slice(-3,-2))){
+  num1 = String(process.argv.slice(-4,-3));
+  operation = (process.argv.slice(-3,-1)).join(' ')}else{
+    num1 = String(process.argv.slice(-3,-2));
+    operation = String(process.argv.slice(-2,-1));}
 console.log(calculate(num1, num2, operation));
 
 
